@@ -17,6 +17,7 @@ let guessCount = 1;
 let resetButton;
 
 let name = 'Bingo';
+guessSubmit.addEventListener('click', checkGuess);
 
 function checkGuess() {
     // stores the inputed value from the user as number
@@ -31,6 +32,7 @@ function checkGuess() {
       // if the guese is equal to random number
       lastResult.textContent = 'Congratulations! You got it right!';
       lastResult.style.backgroundColor = 'green';
+      lastResult.padding = '200px'
       lowOrHi.textContent = '';
       setGameOver();
     } else if (guessCount === 10) {
@@ -57,6 +59,16 @@ function checkGuess() {
         guessField.focus();
         // focuses to the input text field
       }
-      
+
+  }
+  function setGameOver() {
+    guessField.disabled = true;
+    // disabled user entering more values after game is over
+    guessSubmit.disabled = true;
+    // cannot click on the submit button 
+    resetButton = document.createElement('button');
+    resetButton.textContent = 'Start new game';
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener('click', resetGame);
   }
   checkGuess();
