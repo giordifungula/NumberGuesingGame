@@ -16,9 +16,9 @@
     <div class="container">
         <div class="left">
             <div class="col">
-                <i class="fas fa-bars"  id="slideIn"></i>
+                <i class="fas fa-bars"  id="clickBtn"></i>
             </div>
-            <div class="slideIn">
+            <div class="slideIn" id="slideIn">
               <h3>Tips</h3>
               <p>Just try any random number</p>
               <p>If they say too low go for a higher number</p>
@@ -47,12 +47,13 @@
 <script src="js/app.js"></script>
     <script>
       // Your JavaScript goes here
-      var menu = document.getElementById('slideIn');
+      var menu = document.getElementById('clickBtn');
       console.log(menu);
       menu.addEventListener('click',slide);
 
       function slide() {
-        console.log(1);
+        var slideIn = document.getElementById('slideIn');
+        slideIn.style.display = 'inline';
       }
     </script>
   </body>
