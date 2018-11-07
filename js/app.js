@@ -67,8 +67,34 @@ function checkGuess() {
     guessSubmit.disabled = true;
     // cannot click on the submit button 
     resetButton = document.createElement('button');
+    // when game is gone create a button
     resetButton.textContent = 'Start new game';
+    // button will say start a new game
     document.body.appendChild(resetButton);
+    // adds the button to the end of the body
     resetButton.addEventListener('click', resetGame);
+    // when you click reset button run reset game
   }
-  checkGuess();
+  function resetGame() {
+  guessCount = 1;
+  // resets guess count back to 1
+
+  const resetParas = document.querySelectorAll('.resultParas p');
+  // selects all the paragraphs
+  for (let i = 0 ; i < resetParas.length ; i++) {
+    resetParas[i].textContent = '';
+    // empties the paragraphs
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+  // remove the reset button that was created
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+
+  lastResult.style.backgroundColor = 'white';
+
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
