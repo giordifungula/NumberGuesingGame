@@ -52,3 +52,27 @@ html {
           width: 100vw;
       }
   }
+
+
+  /* REsults Section+ */
+  /* <div class="resultParas">
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+              </div> */
+
+.resultParas {
+    transition: 0.2s ease-in;
+}
+.guesses, .lastResult {
+    transition: 0.5s ease-in all;    
+}
+
+/* Components */
+.guessSubmit {
+    padding: 2px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #3dfaaa;
+    color: #fff;
+}
