@@ -17,7 +17,11 @@ html {
   body {
     /* width: 50%; */
     /* margin: 20px 0  0 auto; */
-    background: linear-gradient(to left, rgb(56, 142, 218), #3dfaaa);
+    /* background: url('/images/numbers.jpg');      */
+    background: linear-gradient(to left, rgb(56, 142, 218), #3dfaaa), url('/images/numbers.jpg');
+    /* url('/images/numbers.jpg'); */
+    ;
+
     /* color: rgb(211, 210, 209); */
     color: #fff;
     font-size: 17;
@@ -75,4 +79,19 @@ html {
     background: transparent;
     border: 1px solid #3dfaaa;
     color: #fff;
+}
+
+/* SLide Down */
+.left {
+    transition: 1.5s ease-in all;
+    
+}
+.slide {
+    /* height: 200px; */
+    display: inline;
+    
+}
+.slide > h3, .slide > p{
+    transition: 1.5s ease-in all;
+
 }

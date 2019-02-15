@@ -48,12 +48,13 @@
     <script>
       // Your JavaScript goes here
       var menu = document.getElementById('clickBtn');
-      console.log(menu);
+      // console.log(menu);
       menu.addEventListener('click',slide);
 
       function slide() {
         var slideIn = document.getElementById('slideIn');
-        slideIn.style.display = 'inline';
+        slideIn.classList.toggle('slide');
+        // slideIn.style.transition = '1s';
       }
     </script>
   </body>
