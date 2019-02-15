@@ -4,8 +4,11 @@ html {
   }
   .container {
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      /* display: grid;
+      grid-template-columns: 1fr 1fr; */
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 2em;
   }
   .container:after {
       content: '';
@@ -14,9 +17,10 @@ html {
   body {
     /* width: 50%; */
     /* margin: 20px 0  0 auto; */
-    background: rgb(206, 23, 23);
-    color: rgb(211, 210, 209);
-    font-size: 16;
+    background: linear-gradient(to left, rgb(56, 142, 218), #3dfaaa);
+    /* color: rgb(211, 210, 209); */
+    color: #fff;
+    font-size: 17;
     font-family: 'Courier New', Courier, monospace;
     /* padding:20px; */
   }
@@ -43,7 +47,7 @@ html {
       text-align: right;
       top: 2vw;
   }
-  @screen(max-width: 500px) {
+  @media(max-width: 500px) {
       .right {
           width: 100vw;
       }

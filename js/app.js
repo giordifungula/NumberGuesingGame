@@ -31,7 +31,7 @@ function checkGuess() {
     if (userGuess === randomNumber) {
       // if the guese is equal to random number
       lastResult.textContent = 'Congratulations! You got it right!';
-      lastResult.style.backgroundColor = 'green';
+      lastResult.style.backgroundColor = '#41f45f';
       lastResult.padding = '200px'
       lowOrHi.textContent = '';
       setGameOver();
@@ -43,7 +43,7 @@ function checkGuess() {
       // if its not the random number and player did not reach 10
       lastResult.textContent = 'Wrong!';
       // player is in gameplay but got it wrong
-      lastResult.style.backgroundColor = 'red';
+      lastResult.style.backgroundColor = '#f44253';
       // change color to red 
       if(userGuess < randomNumber) {
         // if the number is wrong but less or more than random number
@@ -67,6 +67,8 @@ function checkGuess() {
     guessSubmit.disabled = true;
     // cannot click on the submit button 
     resetButton = document.createElement('button');
+    // resetButton.classList('btn');
+    resetButton.style.color = '#eee';
     // when game is gone create a button
     resetButton.textContent = 'Start new game';
     // button will say start a new game
@@ -94,7 +96,7 @@ function checkGuess() {
   guessField.value = '';
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  // lastResult.style.backgroundColor = 'white';
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
