@@ -38,9 +38,15 @@ function checkGuess() {
       lastResult.padding = '200px'
       lowOrHi.textContent = '1';
       setGameOver();
-    } else if (guessCount === 10) {
+    }
+    // If The user needs some help with the game notify to them 
+    else if(guessCount === 5) {
+      alert("If you need some help please click on the hamburger menu for Tips and guidance");
+      guessCount++;
+    }
+     else if (guessCount === 10) {
       // if the number of counts are 10 game will be over
-      lastResult.textContent = '!!!GAME OVER!!!' + 'The answer was' + randomNumber;
+      lastResult.textContent = '!!!GAME OVER!!!' + 'The answer was ' + randomNumber;
       setGameOver();
     } else {
       // if its not the random number and player did not reach 10
