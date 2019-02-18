@@ -36,7 +36,7 @@ function checkGuess() {
       lastResult.textContent = 'Congratulations! You got it right! 😁';
       lastResult.style.backgroundColor = '#41f45f';
       lastResult.padding = '200px'
-      lowOrHi.textContent = '1';
+      lowOrHi.textContent = '';
       setGameOver();
     }
     // If The user needs some help with the game notify to them 
@@ -83,7 +83,7 @@ function checkGuess() {
     // button will say start a new game
     // document.body.appendChild(resetButton);
     container.appendChild(resetButton);
-    
+
     // adds the button to the end of the body
     resetButton.addEventListener('click', resetGame);
     // when you click reset button run reset game
@@ -101,6 +101,7 @@ function checkGuess() {
 
   resetButton.parentNode.removeChild(resetButton);
   // remove the reset button that was created
+  lastResult.style.backgroundColor = 'transparent';
 
   guessField.disabled = false;
   guessSubmit.disabled = false;

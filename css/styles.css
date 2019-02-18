@@ -41,9 +41,15 @@ html {
       width: 50vw;
   }
   .slideIn {
-      /* width: -200px; */
+      /* margin-top:5px; */
       display: none;
       transition: 2s;
+      line-height: 1;
+      /* text-align: center; */
+  }
+  .slideIn > h3 {
+      margin-top: 2em;
+      /* Some breating space for the Tips */
   }
   .col > i {
       position: relative;
@@ -57,14 +63,6 @@ html {
       }
   }
 
-
-  /* REsults Section+ */
-  /* <div class="resultParas">
-                <p class="guesses"></p>
-                <p class="lastResult"></p>
-                <p class="lowOrHi"></p>
-              </div> */
-
 .resultParas {
     transition: 0.2s ease-in;
 }
@@ -72,13 +70,19 @@ html {
     transition: 0.5s ease-in all;    
 }
 
-/* Components */
+/* Components and Buttons*/
 .guessSubmit {
     padding: 2px;
     border-radius: 5px;
     background: transparent;
     border: 1px solid #3dfaaa;
     color: #fff;
+}
+.guessField {
+    border-radius: 5px;
+    padding: 2px;    
+    border: 1px solid rgb(56, 142, 218);
+    /* width: 100px;     */
 }
 
 /* SLide Down */
@@ -98,3 +102,4 @@ html {
 .col i:hover {
     cursor: pointer;
 }
+.slideIn
