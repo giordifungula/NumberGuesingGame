@@ -93,5 +93,8 @@ html {
 }
 .slide > h3, .slide > p{
     transition: 1.5s ease-in all;
+}
 
+.col i:hover {
+    cursor: pointer;
 }

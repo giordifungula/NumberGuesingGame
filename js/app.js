@@ -13,6 +13,9 @@ const guessSubmit = document.querySelector('.guessSubmit');
 
 const guessField = document.querySelector('.guessField');
 
+// stores the container content
+let container = document.getElementById('content');
+
 let guessCount = 1;
 let resetButton;
 
@@ -68,11 +71,13 @@ function checkGuess() {
     // cannot click on the submit button 
     resetButton = document.createElement('button');
     // resetButton.classList('btn');
-    resetButton.style.color = '#eee';
+    resetButton.style.color = '#333';
     // when game is gone create a button
     resetButton.textContent = 'Start new game';
     // button will say start a new game
-    document.body.appendChild(resetButton);
+    // document.body.appendChild(resetButton);
+    container.appendChild(resetButton);
+    
     // adds the button to the end of the body
     resetButton.addEventListener('click', resetGame);
     // when you click reset button run reset game
