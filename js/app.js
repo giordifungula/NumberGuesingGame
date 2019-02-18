@@ -33,18 +33,18 @@ function checkGuess() {
     guesses.textContent += userGuess + ' ';
     if (userGuess === randomNumber) {
       // if the guese is equal to random number
-      lastResult.textContent = 'Congratulations! You got it right!';
+      lastResult.textContent = 'Congratulations! You got it right! 😁';
       lastResult.style.backgroundColor = '#41f45f';
       lastResult.padding = '200px'
-      lowOrHi.textContent = '';
+      lowOrHi.textContent = '1';
       setGameOver();
     } else if (guessCount === 10) {
       // if the number of counts are 10 game will be over
-      lastResult.textContent = '!!!GAME OVER!!!';
+      lastResult.textContent = '!!!GAME OVER!!!' + 'The answer was' + randomNumber;
       setGameOver();
     } else {
       // if its not the random number and player did not reach 10
-      lastResult.textContent = 'Wrong!';
+      lastResult.textContent = 'Wrong! 🤔';
       // player is in gameplay but got it wrong
       lastResult.style.backgroundColor = '#f44253';
       // change color to red 
